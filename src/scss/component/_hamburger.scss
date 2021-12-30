@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+@use "../global";
+
+.c-hamburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  .c-hamburger__line {
+    display: block;
+    position: relative;
+    background-color: global.$color_black;
+    width: 20px;
+    height: 2px;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      background-color: global.$color_black;
+      width: 20px;
+      height: 2px;
+    }
+    &::before {
+      top: -8px;
+    }
+    &::after {
+      bottom: -8px;
+    }
+  }
+  @include global.md {
+    display: none;
+  }
+}

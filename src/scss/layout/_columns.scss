@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+@use "../global";
+
+.l-columns {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include global.content_width(wide);
+  @include global.md {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .l-columns__main,
+  .l-columns__sub {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: global.$color_lightgray;
+  }
+  .l-columns__main {
+    @include global.md {
+      width: 60%;
+    }
+  }
+  .l-columns__sub {
+    @include global.md {
+      position: sticky;
+      top: 150px;
+      right: 0;
+      margin-left: 5%;
+      flex: 1;
+    }
+  }
+}

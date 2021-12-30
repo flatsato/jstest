@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@use "../global";
+
+.l-globalNavigation {
+  @include global.under_md {
+    padding: 80px 20px;
+    background-color: global.$color_white;
+    width: 100%;
+    height: 100%;
+  }
+  .l-globalNavigation__list {
+    @include global.md {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .l-globalNavigation__item {
+    @include global.line_height(20, 14);
+    @include global.fz(14);
+    @include global.md {
+      @include global.fz(16);
+    }
+    & + .l-globalNavigation__item {
+      @include global.under_md {
+        margin-top: 20px;
+      }
+      @include global.md {
+        margin-left: 20px;
+      }
+    }
+  }
+}

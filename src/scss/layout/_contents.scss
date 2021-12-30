@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@use "../global";
+
+.l-contents {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: global.$color_lightgray;
+  width: 100%;
+  min-height: calc(100vh - 170px);
+  @include global.md {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .l-contents__wide {
+    @include global.content_width(wide);
+  }
+  .l-contents__narrow {
+    @include global.content_width(narrow);
+  }
+}

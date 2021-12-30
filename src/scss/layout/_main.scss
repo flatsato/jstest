@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+@use "../global";
+
+.l-main {
+  padding-top: global.$header_height_sp;
+  width: 100%;
+  @include global.md {
+    padding-top: global.$header_height;
+    min-height: 760px;
+  }
+}
